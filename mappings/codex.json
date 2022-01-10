@@ -1,7 +1,7 @@
 {
   "mappings": {
     "_meta": {
-      "version": "1.2"
+      "version": "1.3"
     },
     "dynamic_templates": [
       {
@@ -269,8 +269,8 @@
         }
       },
       {
-        "audio.frame_arrive_diff_stddev": {
-          "path_match": "audio.frame_arrive_diff_stddev",
+        "audio.frame_arrive_diff_var": {
+          "path_match": "audio.frame_arrive_diff_var",
           "mapping": {
             "type": "long"
           }
@@ -335,6 +335,14 @@
       {
         "audio.jitter_type_config": {
           "path_match": "audio.jitter_type_config",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "audio.mos": {
+          "path_match": "audio.mos",
           "mapping": {
             "type": "long"
           }
@@ -637,14 +645,6 @@
         }
       },
       {
-        "audio.req.latency_var": {
-          "path_match": "audio.req.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "audio.req.samples": {
           "path_match": "audio.req.samples",
           "mapping": {
@@ -773,14 +773,6 @@
         }
       },
       {
-        "audio.resp.latency_var": {
-          "path_match": "audio.resp.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "audio.resp.samples": {
           "path_match": "audio.resp.samples",
           "mapping": {
@@ -903,14 +895,6 @@
       {
         "audio.rndtrip.latency_sumsqrs": {
           "path_match": "audio.rndtrip.latency_sumsqrs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "audio.rndtrip.latency_var": {
-          "path_match": "audio.rndtrip.latency_var",
           "mapping": {
             "type": "long"
           }
@@ -1540,6 +1524,30 @@
           }
         }
       },
+      {
+        "device.os.id": {
+          "path_match": "device.os.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "device.type.id": {
+          "path_match": "device.type.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "device.vendor.id": {
+          "path_match": "device.vendor.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
 
 
       {
@@ -1582,7 +1590,7 @@
           }
         }
       },
-      
+
 
       {
         "dicom.equip.modality": {
@@ -13175,14 +13183,6 @@
         }
       },
       {
-        "l4.network.latency_var": {
-          "path_match": "l4.network.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "l4.network.samples": {
           "path_match": "l4.network.samples",
           "mapping": {
@@ -13233,14 +13233,6 @@
       {
         "l4.oneway.latency_sumsqrs": {
           "path_match": "l4.oneway.latency_sumsqrs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "l4.oneway.latency_var": {
-          "path_match": "l4.oneway.latency_var",
           "mapping": {
             "type": "long"
           }
@@ -13599,14 +13591,6 @@
         }
       },
       {
-        "l4.req.latency_var": {
-          "path_match": "l4.req.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "l4.req.samples": {
           "path_match": "l4.req.samples",
           "mapping": {
@@ -13663,14 +13647,6 @@
         }
       },
       {
-        "l4.resp.latency_var": {
-          "path_match": "l4.resp.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "l4.resp.samples": {
           "path_match": "l4.resp.samples",
           "mapping": {
@@ -13721,14 +13697,6 @@
       {
         "l4.rndtrip.latency_sumsqrs": {
           "path_match": "l4.rndtrip.latency_sumsqrs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "l4.rndtrip.latency_var": {
-          "path_match": "l4.rndtrip.latency_var",
           "mapping": {
             "type": "long"
           }
@@ -13815,14 +13783,6 @@
         }
       },
       {
-        "l4.svc.latency_var": {
-          "path_match": "l4.svc.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "l4.svc.samples": {
           "path_match": "l4.svc.samples",
           "mapping": {
@@ -13873,14 +13833,6 @@
       {
         "l4.transact.latency_sumsqrs": {
           "path_match": "l4.transact.latency_sumsqrs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "l4.transact.latency_var": {
-          "path_match": "l4.transact.latency_var",
           "mapping": {
             "type": "long"
           }
@@ -13979,32 +13931,32 @@
         }
       },
       {
-        "media.packet_rate_stddev": {
-          "path_match": "media.packet_rate_stddev",
+        "media.packet_rate_var": {
+          "path_match": "media.packet_rate_var",
           "mapping": {
             "type": "long"
           }
         }
       },
       {
-        "media.packet_rate_stddev_max": {
-          "path_match": "media.packet_rate_stddev_max",
+        "media.packet_rate_var_max": {
+          "path_match": "media.packet_rate_var_max",
           "mapping": {
             "type": "long"
           }
         }
       },
       {
-        "media.packet_rate_stddev_min": {
-          "path_match": "media.packet_rate_stddev_min",
+        "media.packet_rate_var_min": {
+          "path_match": "media.packet_rate_var_min",
           "mapping": {
             "type": "long"
           }
         }
       },
       {
-        "media.packet_rate_stddev_sum": {
-          "path_match": "media.packet_rate_stddev_sum",
+        "media.packet_rate_var_sum": {
+          "path_match": "media.packet_rate_var_sum",
           "mapping": {
             "type": "long"
           }
@@ -14031,6 +13983,40 @@
       {
         "mef.evc.type.id": {
           "path_match": "mef.evc.type.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+
+
+      {
+        "mobile.country.id": {
+          "path_match": "mobile.country.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "mobile.network.id": {
+          "path_match": "mobile.network.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "mobile.rat.id": {
+          "path_match": "mobile.rat.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "mobile.uli.type.id": {
+          "path_match": "mobile.uli.type.id",
           "mapping": {
             "type": "keyword"
           }
@@ -17753,8 +17739,208 @@
         }
       },
       {
+        "rtcp.sdes.ssrc_csrc": {
+          "path_match": "rtcp.sdes.ssrc_csrc",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.items": {
+          "path_match": "rtcp.sdes.items",
+          "mapping": {
+            "type": "short"
+          }
+        }
+      },
+      {
         "rtcp.sdes.item_type.id": {
           "path_match": "rtcp.sdes.item_type.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.item_type.name": {
+          "path_match": "rtcp.sdes.item_type.name",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.size": {
+          "path_match": "rtcp.sdes.size",
+          "mapping": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.endpoint.id": {
+          "path_match": "rtcp.sdes.endpoint.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.endpoint.user.name": {
+          "path_match": "rtcp.sdes.endpoint.user.name",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.endpoint.host.name": {
+          "path_match": "rtcp.sdes.endpoint.host.name",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.user.fullname": {
+          "path_match": "rtcp.sdes.user.fullname",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.user.email": {
+          "path_match": "rtcp.sdes.user.email",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.subscriber.msisdn": {
+          "path_match": "rtcp.sdes.subscriber.msisdn",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.location": {
+          "path_match": "rtcp.sdes.location",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.app.name": {
+          "path_match": "rtcp.sdes.app.name",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.note": {
+          "path_match": "rtcp.sdes.note",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.priv.prefix_size": {
+          "path_match": "rtcp.sdes.priv.prefix_size",
+          "mapping": {
+            "type": "short"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.priv.prefix": {
+          "path_match": "rtcp.sdes.priv.prefix",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.priv.value": {
+          "path_match": "rtcp.sdes.priv.value",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.h323_caddr": {
+          "path_match": "rtcp.sdes.h323_caddr",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.apsi": {
+          "path_match": "rtcp.sdes.apsi",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.rgrp": {
+          "path_match": "rtcp.sdes.rgrp",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.stream_id": {
+          "path_match": "rtcp.sdes.stream_id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.stream_id_repaired": {
+          "path_match": "rtcp.sdes.stream_id_repaired",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.ccid": {
+          "path_match": "rtcp.sdes.ccid",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.sdes.mid": {
+          "path_match": "rtcp.sdes.mid",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.voip.rx.jba.id": {
+          "path_match": "rtcp.voip.rx.jba.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.voip.rx.plc.id": {
+          "path_match": "rtcp.voip.rx.plc.id",
           "mapping": {
             "type": "keyword"
           }
@@ -17779,6 +17965,14 @@
       {
         "rtcp.xr.block_type.id": {
           "path_match": "rtcp.xr.block_type.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtcp.xr.block_type.name": {
+          "path_match": "rtcp.xr.block_type.name",
           "mapping": {
             "type": "keyword"
           }
@@ -17951,622 +18145,22 @@
             "type": "keyword"
           }
         }
-      },
-      {
-        "rtcp.version.ver": {
-          "path_match": "rtcp.version.ver",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.cntrl_packet_type.name": {
-          "path_match": "rtcp.cntrl_packet_type.name",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.records": {
-          "path_match": "rtcp.records",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.dlsr": {
-          "path_match": "rtcp.report.dlsr",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.highest_seq_num": {
-          "path_match": "rtcp.report.highest_seq_num",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.jitter": {
-          "path_match": "rtcp.report.jitter",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.jitter_avg": {
-          "path_match": "rtcp.report.jitter_avg",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.jitter_max": {
-          "path_match": "rtcp.report.jitter_max",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.jitter_min": {
-          "path_match": "rtcp.report.jitter_min",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.jitter_samples": {
-          "path_match": "rtcp.report.jitter_samples",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.jitter_sum": {
-          "path_match": "rtcp.report.jitter_sum",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.loss_rate": {
-          "path_match": "rtcp.report.loss_rate",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.packets_lost": {
-          "path_match": "rtcp.report.packets_lost",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.report.ssrc": {
-          "path_match": "rtcp.report.ssrc",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.size": {
-          "path_match": "rtcp.size",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.sr.bytes": {
-          "path_match": "rtcp.sr.bytes",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.sr.ntp.timestamp": {
-          "path_match": "rtcp.sr.ntp.timestamp",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.sr.packets": {
-          "path_match": "rtcp.sr.packets",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.sr.timestamp": {
-          "path_match": "rtcp.sr.timestamp",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.ssrc": {
-          "path_match": "rtcp.ssrc",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.voip.size": {
-          "path_match": "rtcp.voip.size",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.voip.ssrc": {
-          "path_match": "rtcp.voip.ssrc",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.voip.burst.density": {
-          "path_match": "rtcp.voip.burst.density",
-          "mapping": {
-            "type": "float"
-          }
-        }
-      },
-      {
-        "rtcp.voip.burst.duration": {
-          "path_match": "rtcp.voip.burst.duration",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.voip.discard_rate": {
-          "path_match": "rtcp.voip.discard_rate",
-          "mapping": {
-            "type": "float"
-          }
-        }
-      },
-      {
-        "rtcp.voip.gap.density": {
-          "path_match": "rtcp.voip.gap.density",
-          "mapping": {
-            "type": "float"
-          }
-        }
-      },
-      {
-        "rtcp.voip.gap.duration": {
-          "path_match": "rtcp.voip.gap.duration",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.voip.gmin": {
-          "path_match": "rtcp.voip.gmin",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.jb_delay_abs_max": {
-          "path_match": "rtcp.voip.jb_delay_abs_max",
-          "mapping": {
-            "type": "integer"
-          }
-        }
-      },
-      {
-        "rtcp.voip.jb_delay_max": {
-          "path_match": "rtcp.voip.jb_delay_max",
-          "mapping": {
-            "type": "integer"
-          }
-        }
-      },
-      {
-        "rtcp.voip.jb_delay_nom": {
-          "path_match": "rtcp.voip.jb_delay_nom",
-          "mapping": {
-            "type": "integer"
-          }
-        }
-      },
-      {
-        "rtcp.voip.loss_rate": {
-          "path_match": "rtcp.voip.loss_rate",
-          "mapping": {
-            "type": "float"
-          }
-        }
-      },
-      {
-        "rtcp.voip.mos": {
-          "path_match": "rtcp.voip.mos",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.mos_cq": {
-          "path_match": "rtcp.voip.mos_cq",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.mos_cq_avg": {
-          "path_match": "rtcp.voip.mos_cq_avg",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.mos_cq_total": {
-          "path_match": "rtcp.voip.mos_cq_total",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.mos_lq": {
-          "path_match": "rtcp.voip.mos_lq",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.mos_lq_avg": {
-          "path_match": "rtcp.voip.mos_lq_avg",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.mos_lq_total": {
-          "path_match": "rtcp.voip.mos_lq_total",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.network.latency": {
-          "path_match": "rtcp.voip.network.latency",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.voip.noise": {
-          "path_match": "rtcp.voip.noise",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.r_factor": {
-          "path_match": "rtcp.voip.r_factor",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.r_factor_avg": {
-          "path_match": "rtcp.voip.r_factor_avg",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.r_factor_external": {
-          "path_match": "rtcp.voip.r_factor_external",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.r_total": {
-          "path_match": "rtcp.voip.r_total",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.rerl": {
-          "path_match": "rtcp.voip.rerl",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.rndtrip.latency": {
-          "path_match": "rtcp.voip.rndtrip.latency",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.voip.signal": {
-          "path_match": "rtcp.voip.signal",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.snr": {
-          "path_match": "rtcp.voip.snr",
-          "mapping": {
-            "type": "integer"
-          }
-        }
-      },
-      {
-        "rtcp.voip.rx.config": {
-          "path_match": "rtcp.voip.rx.config",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.rx.jb_rate": {
-          "path_match": "rtcp.voip.rx.jb_rate",
-          "mapping": {
-            "type": "short"
-          }
-        }
-      },
-      {
-        "rtcp.voip.rx.jba.id": {
-          "path_match": "rtcp.voip.rx.jba.id",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.voip.rx.jba.name": {
-          "path_match": "rtcp.voip.rx.jba.name",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.voip.rx.plc.id": {
-          "path_match": "rtcp.voip.rx.plc.id",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.voip.rx.plc.name": {
-          "path_match": "rtcp.voip.rx.plc.name",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.ssrc": {
-          "path_match": "rtcp.xr.audio_conceal.ssrc",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.meas_type.name": {
-          "path_match": "rtcp.xr.audio_conceal.meas_type.name",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.conceal_method.name": {
-          "path_match": "rtcp.xr.audio_conceal.conceal_method.name",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.playout_duration": {
-          "path_match": "rtcp.xr.audio_conceal.playout_duration",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.conceal_duration": {
-          "path_match": "rtcp.xr.audio_conceal.conceal_duration",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.conceal_duration_buff_adj": {
-          "path_match": "rtcp.xr.audio_conceal.conceal_duration_buff_adj",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.playout_interrupts": {
-          "path_match": "rtcp.xr.audio_conceal.playout_interrupts",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.playout_interrupt_duration_avg": {
-          "path_match": "rtcp.xr.audio_conceal.playout_interrupt_duration_avg",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.unimpaired_secs": {
-          "path_match": "rtcp.xr.audio_conceal.unimpaired_secs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.concealed_secs": {
-          "path_match": "rtcp.xr.audio_conceal.concealed_secs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.severe_concealed_secs": {
-          "path_match": "rtcp.xr.audio_conceal.severe_concealed_secs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.scs_thresh": {
-          "path_match": "rtcp.xr.audio_conceal.scs_thresh",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.packets_unimpaired": {
-          "path_match": "rtcp.xr.audio_conceal.packets_unimpaired",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.packets_concealed": {
-          "path_match": "rtcp.xr.audio_conceal.packets_concealed",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.packets_severe_concealed": {
-          "path_match": "rtcp.xr.audio_conceal.packets_severe_concealed",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtcp.xr.audio_conceal.packets_silent": {
-          "path_match": "rtcp.xr.audio_conceal.packets_silent",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
+      },      
 
 
       {
-        "rtp.payload_type.id": {
+        "rtp.payload.codec.id": {
+          "path_match": "rtp.payload.codec.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "rtp.payload.type.id": {
           "path_match": "rtp.payload_type.id",
           "mapping": {
             "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtp.flows": {
-          "path_match": "rtp.flows",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtp.interval": {
-          "path_match": "rtp.interval",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtp.packets_ooo_total": {
-          "path_match": "rtp.packets_ooo_total",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "rtp.payload_type.name": {
-          "path_match": "rtp.payload_type.name",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "rtp.seq_num": {
-          "path_match": "rtp.seq_num",
-          "mapping": {
-            "type": "long"
           }
         }
       },
@@ -26867,22 +26461,6 @@
 
 
       {
-        "subscriber.imei": {
-          "path_match": "subscriber.imei",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
-        "subscriber.imsi": {
-          "path_match": "subscriber.imsi",
-          "mapping": {
-            "type": "keyword"
-          }
-        }
-      },
-      {
         "subscriber.info": {
           "path_match": "subscriber.info",
           "mapping": {
@@ -26891,8 +26469,16 @@
         }
       },
       {
-        "subscriber.msisdn": {
-          "path_match": "subscriber.msisdn",
+        "subscriber.roam.state.id": {
+          "path_match": "subscriber.roam.state.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "subscriber.tether.state.id": {
+          "path_match": "subscriber.tether.state.id",
           "mapping": {
             "type": "keyword"
           }
@@ -27053,14 +26639,6 @@
         }
       },
       {
-        "tcp.handshake.cnd.latency_var": {
-          "path_match": "tcp.handshake.cnd.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "tcp.handshake.cnd.samples": {
           "path_match": "tcp.handshake.cnd.samples",
           "mapping": {
@@ -27117,14 +26695,6 @@
         }
       },
       {
-        "tcp.handshake.latency_var": {
-          "path_match": "tcp.handshake.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "tcp.handshake.samples": {
           "path_match": "tcp.handshake.samples",
           "mapping": {
@@ -27175,14 +26745,6 @@
       {
         "tcp.handshake.snd.latency_sumsqrs": {
           "path_match": "tcp.handshake.snd.latency_sumsqrs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "tcp.handshake.snd.latency_var": {
-          "path_match": "tcp.handshake.snd.latency_var",
           "mapping": {
             "type": "long"
           }
@@ -27301,14 +26863,6 @@
         }
       },
       {
-        "tcp.network.latency_var": {
-          "path_match": "tcp.network.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "tcp.network.samples": {
           "path_match": "tcp.network.samples",
           "mapping": {
@@ -27415,14 +26969,6 @@
       {
         "tcp.req.latency_sumsqrs": {
           "path_match": "tcp.req.latency_sumsqrs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "tcp.req.latency_var": {
-          "path_match": "tcp.req.latency_var",
           "mapping": {
             "type": "long"
           }
@@ -27541,14 +27087,6 @@
         }
       },
       {
-        "tcp.resp.latency_var": {
-          "path_match": "tcp.resp.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "tcp.resp.samples": {
           "path_match": "tcp.resp.samples",
           "mapping": {
@@ -27661,14 +27199,6 @@
         }
       },
       {
-        "tcp.rndtrip.latency_var": {
-          "path_match": "tcp.rndtrip.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "tcp.rndtrip.samples": {
           "path_match": "tcp.rndtrip.samples",
           "mapping": {
@@ -27725,14 +27255,6 @@
         }
       },
       {
-        "tcp.svc.latency_var": {
-          "path_match": "tcp.svc.latency_var",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
         "tcp.svc.samples": {
           "path_match": "tcp.svc.samples",
           "mapping": {
@@ -27783,14 +27305,6 @@
       {
         "tcp.transact.latency_sumsqrs": {
           "path_match": "tcp.transact.latency_sumsqrs",
-          "mapping": {
-            "type": "long"
-          }
-        }
-      },
-      {
-        "tcp.transact.latency_var": {
-          "path_match": "tcp.transact.latency_var",
           "mapping": {
             "type": "long"
           }
@@ -28422,8 +27936,8 @@
           }
         }
       },
-  
-      
+
+
       {
         "tunnel.ethernet.ether_type.id": {
           "path_match": "tunnel.ethernet.ether_type.id",
@@ -28432,8 +27946,8 @@
           }
         }
       },
-  
-  
+
+
       {
         "tunnel.ip.dscp.id": {
           "path_match": "tunnel.ip.dscp.id",
@@ -28466,8 +27980,8 @@
           }
         }
       },
-  
-  
+
+
       {
         "tunnel.l2.frame.type.id": {
           "path_match": "tunnel.l2.frame.type.id",
@@ -28476,8 +27990,8 @@
           }
         }
       },
-  
-  
+
+
       {
         "tunnel.l4.proto.id": {
           "path_match": "tunnel.l4.proto.id",
@@ -28486,8 +28000,8 @@
           }
         }
       },
-  
-  
+
+
       {
         "tunnel.server.geo.loc.latitude": {
           "path_match": "tunnel.server.geo.loc.latitude",
@@ -29083,6 +28597,150 @@
       {
         "video.slice_quant_super_p": {
           "path_match": "video.slice_quant_super_p",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.b_frame.impairied": {
+          "path_match": "video.b_frame.impairied",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.b_frame.in": {
+          "path_match": "video.b_frame.in",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.frame_rate": {
+          "path_match": "video.frame_rate",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.gop.type.id": {
+          "path_match": "video.gop.type.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "video.gop.type.name": {
+          "path_match": "video.gop.type.name",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "video.gop.size_avg": {
+          "path_match": "video.gop.size_avg",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.i_frame.gap_avg": {
+          "path_match": "video.i_frame.gap_avg",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.i_frame.impairied": {
+          "path_match": "video.i_frame.impairied",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.i_frame.in": {
+          "path_match": "video.i_frame.in",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.i_frame.slices_avg": {
+          "path_match": "video.i_frame.slices_avg",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.p_frame.impairied": {
+          "path_match": "video.p_frame.impairied",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.p_frame.in": {
+          "path_match": "video.p_frame.in",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.scan.mode.id": {
+          "path_match": "video.scan.mode.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "video.scan.mode.name": {
+          "path_match": "video.scan.mode.name",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "video.si_frame.impairied": {
+          "path_match": "video.si_frame.impairied",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.si_frame.in": {
+          "path_match": "video.si_frame.in",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.sp_frame.impairied": {
+          "path_match": "video.sp_frame.impairied",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "video.sp_frame.in": {
+          "path_match": "video.sp_frame.in",
           "mapping": {
             "type": "long"
           }
@@ -30086,6 +29744,104 @@
           }
         }
       },
+
+
+      {
+        "nokia.aa.anl.congestion.id": {
+          "path_match": "nokia.aa.anl.congestion.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "nokia.aa.anl.type.id": {
+          "path_match": "nokia.aa.anl.type.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "nokia.aa.charging.group.id": {
+          "path_match": "nokia.aa.charging.group.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "nokia.aa.record.type.id": {
+          "path_match": "nokia.aa.record.type.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "nokia.aa.session.direction.id": {
+          "path_match": "nokia.aa.session.direction.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "nokia.aa.subscriber.type.id": {
+          "path_match": "nokia.aa.subscriber.type.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "nokia.device.os.version.1": {
+          "path_match": "nokia.device.os.version.1",
+          "mapping": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "nokia.device.os.version.2": {
+          "path_match": "nokia.device.os.version.2",
+          "mapping": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "nokia.device.os.version.3": {
+          "path_match": "nokia.device.os.version.3",
+          "mapping": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "nokia.ip.family.id": {
+          "path_match": "nokia.ip.family.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "nokia.mos.ref.id": {
+          "path_match": "nokia.mos.ref.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "nokia.rtp.rtt.latency_source.id": {
+          "path_match": "nokia.rtp.rtt.latency_source.id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },      
 
 
       {
@@ -31397,8 +31153,24 @@
               }
             }
           },
+          "host": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "keyword"
+              }
+            }
+          },
           "model": {
             "type": "keyword"
+          },
+          "os": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "keyword"
+              }
+            }
           },
           "port": {
             "type": "object",
@@ -31440,8 +31212,21 @@
               }
             }
           },
+          "type": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "keyword"
+              }
+            }
+          },
           "vendor": {
-            "type": "keyword"
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "keyword"
+              }
+            }
           },
           "version": {
             "type": "object",
@@ -35889,12 +35674,18 @@
           "bytes": {
             "type": "long"
           },
+          "jitter": {
+            "type": "long"
+          },
           "latency": {
             "type": "long"
           },
           "network": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -35903,6 +35694,9 @@
           "oneway": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -35933,6 +35727,9 @@
           "req": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -35941,6 +35738,9 @@
           "resp": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -35949,6 +35749,9 @@
           "rndtrip": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -35980,6 +35783,9 @@
           "svc": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -35988,6 +35794,9 @@
           "transact": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -36145,15 +35954,36 @@
           "apn": {
             "type": "keyword"
           },
+          "country": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "keyword"
+              }
+            }
+          },
           "ggsn": {
             "type": "keyword"
           },
-          "rat": {
+          "network": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "keyword"
+              }
+            }
+          },
+          "plmn": {
             "type": "object",
             "properties": {
               "id": {
                 "type": "keyword"
-              },
+              }
+            }
+          },
+          "rat": {
+            "type": "object",
+            "properties": {
               "name": {
                 "type": "keyword"
               }
@@ -36164,6 +35994,43 @@
           },
           "sgsn": {
             "type": "keyword"
+          },
+          "uli": {
+            "type": "object",
+            "properties": {
+              "cell": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "loc": {
+                "type": "object",
+                "properties": {
+                  "info": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "region": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "type": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -37455,6 +37322,492 @@
           }
         }
       },
+      "rtcp": {
+        "type": "object",
+        "properties": {
+          "cntrl_packet_type": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "keyword"
+              }
+            }
+          },
+          "records": {
+            "type": "long"
+          },
+          "report": {
+            "type": "object",
+            "properties": {
+              "dlsr": {
+                "type": "long"
+              },
+              "highest_seq_num": {
+                "type": "long"
+              },
+              "jitter": {
+                "type": "long"
+              },
+              "jitter_avg": {
+                "type": "long"
+              },
+              "jitter_max": {
+                "type": "long"
+              },
+              "jitter_min": {
+                "type": "long"
+              },
+              "jitter_samples": {
+                "type": "long"
+              },
+              "jitter_sum": {
+                "type": "long"
+              },
+              "loss_rate": {
+                "type": "long"
+              },
+              "lsr": {
+                "type": "long"
+              },
+              "packets_lost": {
+                "type": "long"
+              },
+              "ssrc": {
+                "type": "keyword"
+              }
+            }
+          },
+          "size": {
+            "type": "long"
+          },
+          "sr": {
+            "type": "object",
+            "properties": {
+              "bytes": {
+                "type": "long"
+              },
+              "ntp": {
+                "type": "object",
+                "properties": {
+                  "timestamp": {
+                    "type": "long"
+                  }
+                }
+              },
+              "packets": {
+                "type": "long"
+              },
+              "timestamp": {
+                "type": "long"
+              }
+            }
+          },
+          "ssrc": {
+            "type": "keyword"
+          },
+          "version": {
+            "type": "object",
+            "properties": {
+              "ver": {
+                "type": "keyword"
+              }
+            }
+          },
+          "xr": {
+            "type": "object",
+            "properties": {
+              "audio_conceal": {
+                "type": "object",
+                "properties": {
+                  "ssrc": {
+                    "type": "keyword"
+                  },
+                  "meas_type": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "conceal_method": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "playout_duration": {
+                    "type": "long"
+                  },
+                  "conceal_duration": {
+                    "type": "long"
+                  },
+                  "conceal_duration_buff_adj": {
+                    "type": "long"
+                  },
+                  "playout_interrupts": {
+                    "type": "long"
+                  },
+                  "playout_interrupt_duration_avg": {
+                    "type": "long"
+                  },
+                  "unimpaired_secs": {
+                    "type": "long"
+                  },
+                  "concealed_secs": {
+                    "type": "long"
+                  },
+                  "severe_concealed_secs": {
+                    "type": "long"
+                  },
+                  "scs_thresh": {
+                    "type": "long"
+                  },
+                  "packets_unimpaired": {
+                    "type": "long"
+                  },
+                  "packets_concealed": {
+                    "type": "long"
+                  },
+                  "packets_severe_concealed": {
+                    "type": "long"
+                  },
+                  "packets_silent": {
+                    "type": "long"
+                  }
+                }
+              },
+              "burst_gap": {
+                "type": "object",
+                "properties": {
+                  "ssrc": {
+                    "type": "keyword"
+                  },
+                  "gmin": {
+                    "type": "short"
+                  },
+                  "bursts": {
+                    "type": "long"
+                  },
+                  "burst": {
+                    "type": "object",
+                    "properties": {
+                      "duration_sum": {
+                        "type": "long"
+                      },
+                      "duration_sumsqrs": {
+                        "type": "long"
+                      },
+                      "duration_avg": {
+                        "type": "long"
+                      },
+                      "duration_var": {
+                        "type": "long"
+                      },
+                      "duration_avg_packets": {
+                        "type": "long"
+                      },
+                      "packets_discard": {
+                        "type": "long"
+                      },
+                      "packets_discard_rate": {
+                        "type": "long"
+                      },
+                      "packets_lost": {
+                        "type": "long"
+                      },
+                      "packet_loss_rate": {
+                        "type": "long"
+                      },
+                      "packets_expected": {
+                        "type": "long"
+                      }
+                    }
+                  },
+                  "gaps": {
+                    "type": "long"
+                  },
+                  "gap": {
+                    "type": "object",
+                    "properties": {
+                      "duration_avg": {
+                        "type": "long"
+                      },
+                      "duration_avg_packets": {
+                        "type": "long"
+                      },
+                      "packet_loss_rate": {
+                        "type": "long"
+                      },
+                      "packet_discard_rate": {
+                        "type": "long"
+                      }
+                    }
+                  }
+                }
+              },
+              "voip": {
+                "type": "object",
+                "properties": {
+                  "size": {
+                    "type": "long"
+                  },
+                  "ssrc": {
+                    "type": "keyword"
+                  },
+                  "gmin": {
+                    "type": "short"
+                  },
+                  "burst": {
+                    "type": "object",
+                    "properties": {
+                      "density": {
+                        "type": "float"
+                      },
+                      "duration": {
+                        "type": "long"
+                      }
+                    }
+                  },
+                  "discard_rate": {
+                    "type": "float"
+                  },
+                  "gap": {
+                    "type": "object",
+                    "properties": {
+                      "density": {
+                        "type": "float"
+                      },
+                      "duration": {
+                        "type": "long"
+                      }
+                    }
+                  },
+                  "jb_delay_abs_max": {
+                    "type": "integer"
+                  },
+                  "jb_delay_max": {
+                    "type": "integer"
+                  },
+                  "jb_delay_nom": {
+                    "type": "integer"
+                  },
+                  "loss_rate": {
+                    "type": "float"
+                  },
+                  "mos": {
+                    "type": "short"
+                  },
+                  "mos_cq": {
+                    "type": "short"
+                  },
+                  "mos_cq_avg": {
+                    "type": "short"
+                  },
+                  "mos_cq_total": {
+                    "type": "short"
+                  },
+                  "mos_lq": {
+                    "type": "short"
+                  },
+                  "mos_lq_avg": {
+                    "type": "short"
+                  },
+                  "mos_lq_total": {
+                    "type": "short"
+                  },
+                  "network": {
+                    "type": "object",
+                    "properties": {
+                      "latency": {
+                        "type": "long"
+                      }
+                    }
+                  },
+                  "noise": {
+                    "type": "short"
+                  },
+                  "r_factor": {
+                    "type": "short"
+                  },
+                  "r_factor_avg": {
+                    "type": "short"
+                  },
+                  "r_factor_burst": {
+                    "type": "short"
+                  },
+                  "r_factor_cq": {
+                    "type": "short"
+                  },
+                  "r_factor_external": {
+                    "type": "short"
+                  },
+                  "r_factor_gap": {
+                    "type": "short"
+                  },
+                  "r_factor_lq": {
+                    "type": "short"
+                  },
+                  "r_factor_nom": {
+                    "type": "short"
+                  },
+                  "r_total": {
+                    "type": "short"
+                  },
+                  "rerl": {
+                    "type": "short"
+                  },
+                  "rndtrip": {
+                    "type": "object",
+                    "properties": {
+                      "jitter": {
+                        "type": "long"
+                      },
+                      "latency": {
+                        "type": "long"
+                      }
+                    }
+                  },
+                  "signal": {
+                    "type": "short"
+                  },
+                  "snr": {
+                    "type": "integer"
+                  },
+                  "rx": {
+                    "type": "object",
+                    "properties": {
+                      "config": {
+                        "type": "short"
+                      },
+                      "jb_rate": {
+                        "type": "short"
+                      },
+                      "jba": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "keyword"
+                          }
+                        }
+                      },
+                      "plc": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "keyword"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "rtp": {
+        "type": "object",
+        "properties": {
+          "bytes": {
+            "type": "long"
+          },
+          "bytes_total": {
+            "type": "long"
+          },
+          "csrcs": {
+            "type": "integer"
+          },
+          "csrc": {
+            "type": "keyword"
+          },
+          "flag": {
+            "type": "object",
+            "properties": {
+              "ext": {
+                "type": "boolean"
+              },
+              "marker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "flows": {
+            "type": "long"
+          },
+          "interval": {
+            "type": "integer"
+          },
+          "packets": {
+            "type": "long"
+          },
+          "packets_total": {
+            "type": "long"
+          },
+          "packets_discard": {
+            "type": "long"
+          },
+          "packets_discard_total": {
+            "type": "long"
+          },
+          "packets_lost": {
+            "type": "long"
+          },
+          "packets_lost_total": {
+            "type": "long"
+          },
+          "packets_ooo": {
+            "type": "long"
+          },
+          "packets_ooo_total": {
+            "type": "long"
+          },
+          "payload": {
+            "type": "object",
+            "properties": {
+              "clockrate": {
+                "type": "long"
+              },
+              "codec": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "type": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "seq_num": {
+            "type": "integer"
+          },
+          "ssrc": {
+            "type": "keyword"
+          },
+          "timestamp": {
+            "type": "date"
+          },
+          "version": {
+            "type": "object",
+            "properties": {
+              "ver": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
       "sec": {
         "type": "object",
         "properties": {
@@ -37602,6 +37955,46 @@
           }
         }
       },
+      "subscriber": {
+        "type": "object",
+        "properties": {
+          "imei": {
+            "type": "keyword"
+          },
+          "imsi": {
+            "type": "keyword"
+          },
+          "msisdn": {
+            "type": "keyword"
+          },
+          "roam": {
+            "type": "object",
+            "properties": {
+              "state": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "tether": {
+            "type": "object",
+            "properties": {
+              "state": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "tcp": {
         "type": "object",
         "properties": {
@@ -37676,6 +38069,9 @@
               "cnd": {
                 "type": "object",
                 "properties": {
+                  "jitter": {
+                    "type": "long"
+                  },
                   "latency": {
                     "type": "long"
                   }
@@ -37687,6 +38083,9 @@
               "snd": {
                 "type": "object",
                 "properties": {
+                  "jitter": {
+                    "type": "long"
+                  },
                   "latency": {
                     "type": "long"
                   }
@@ -37841,6 +38240,9 @@
           "svc": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -37867,6 +38269,9 @@
           "transact": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               }
@@ -38404,7 +38809,7 @@
                     "type": "object",
                     "properties": {
                       "id": {
-                        "type": "keyword"
+                        "type": "integer"
                       },
                       "name": {
                         "type": "keyword"
@@ -42198,7 +42603,7 @@
                     "type": "object",
                     "properties": {
                       "id": {
-                        "type": "keyword"
+                        "type": "integer"
                       },
                       "name": {
                         "type": "keyword"
@@ -42439,6 +42844,9 @@
           "l4": {
             "type": "object",
             "properties": {
+              "jitter": {
+                "type": "long"
+              },
               "latency": {
                 "type": "long"
               },
@@ -43433,15 +43841,10 @@
               "dst": {
                 "type": "object",
                 "properties": {
-                  "host": {
-                    "type": "object",
-                    "properties": {
-                      "hostname": {
-                        "type": "keyword"
-                      }
-                    }
+                  "name": {
+                    "type": "keyword"
                   },
-                  "id": {
+                  "sgt": {
                     "type": "keyword"
                   }
                 }
@@ -43449,15 +43852,10 @@
               "src": {
                 "type": "object",
                 "properties": {
-                  "host": {
-                    "type": "object",
-                    "properties": {
-                      "hostname": {
-                        "type": "keyword"
-                      }
-                    }
+                  "name": {
+                    "type": "keyword"
                   },
-                  "id": {
+                  "sgt": {
                     "type": "keyword"
                   }
                 }
@@ -44515,7 +44913,7 @@
               "src": {
                 "type": "object",
                 "properties": {
-                  "id": {
+                  "sgt": {
                     "type": "keyword"
                   }
                 }
@@ -45394,7 +45792,7 @@
               "channel": {
                 "type": "object",
                 "properties": {
-                  "id1": {                    
+                  "id1": {
                     "type": "object",
                     "properties": {
                       "bytes": {
@@ -45410,7 +45808,7 @@
                       }
                     }
                   },
-                  "id2": {                    
+                  "id2": {
                     "type": "object",
                     "properties": {
                       "bytes": {
@@ -45426,7 +45824,7 @@
                       }
                     }
                   },
-                  "id3": {                    
+                  "id3": {
                     "type": "object",
                     "properties": {
                       "bytes": {
@@ -45442,7 +45840,7 @@
                       }
                     }
                   },
-                  "id4": {                    
+                  "id4": {
                     "type": "object",
                     "properties": {
                       "bytes": {
@@ -45458,7 +45856,7 @@
                       }
                     }
                   },
-                  "id5": {                    
+                  "id5": {
                     "type": "object",
                     "properties": {
                       "bytes": {
@@ -45871,6 +46269,243 @@
       "nokia": {
         "type": "object",
         "properties": {
+          "aa": {
+            "type": "object",
+            "properties": {
+              "anl": {
+                "type": "object",
+                "properties": {
+                  "congestion": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "topology": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "type": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "charging": {
+                "type": "object",
+                "properties": {
+                  "group": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "record": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "session": {
+                "type": "object",
+                "properties": {
+                  "direction": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "subscriber": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "av": {
+            "type": "object",
+            "properties": {
+              "mos": {
+                "type": "integer"
+              }
+            }
+          },
+          "bsid": {
+            "type": "keyword"
+          },
+          "charging": {
+            "type": "object",
+            "properties": {
+              "characteristic": {
+                "type": "long"
+              }
+            }
+          },
+          "confidence": {
+            "type": "object",
+            "properties": {
+              "abrs": {
+                "type": "integer"
+              },
+              "audio": {
+                "type": "integer"
+              },
+              "encrypt": {
+                "type": "integer"
+              },
+              "esni": {
+                "type": "integer"
+              },
+              "realtime_comm": {
+                "type": "integer"
+              },
+              "subscriber_download": {
+                "type": "integer"
+              },
+              "subscriber_upload": {
+                "type": "integer"
+              },
+              "video": {
+                "type": "integer"
+              }
+            }
+          },
+          "customer": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "keyword"
+              }
+            }
+          },
+          "degrade_factor": {
+            "type": "object",
+            "properties": {
+              "av_sync": {
+                "type": "long"
+              },
+              "codec": {
+                "type": "long"
+              },
+              "codec_quant": {
+                "type": "long"
+              },
+              "codec_quant_encode_bw": {
+                "type": "long"
+              },
+              "echo": {
+                "type": "long"
+              },
+              "frame_present_rate": {
+                "type": "long"
+              },
+              "frame_resolution": {
+                "type": "long"
+              },
+              "gop_length": {
+                "type": "long"
+              },
+              "latency": {
+                "type": "long"
+              },
+              "net_bw": {
+                "type": "long"
+              },
+              "noise": {
+                "type": "long"
+              },
+              "packet_discard": {
+                "type": "long"
+              },
+              "packet_loss": {
+                "type": "long"
+              },
+              "recency": {
+                "type": "long"
+              },
+              "signal": {
+                "type": "long"
+              }
+            }
+          },
+          "frame": {
+            "type": "object",
+            "properties": {
+              "interval_avg": {
+                "type": "long"
+              },
+              "jitter_avg": {
+                "type": "long"
+              }
+            }
+          },
+          "i_frame": {
+            "type": "object",
+            "properties": {
+              "jitter_avg": {
+                "type": "long"
+              }
+            }
+          },
+          "ip": {
+            "type": "object",
+            "properties": {
+              "family": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "mos": {
+            "type": "object",
+            "properties": {
+              "ref": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
           "nat": {
             "type": "object",
             "properties": {
@@ -45889,6 +46524,149 @@
                 }
               }
             }
+          },
+          "pgw_ggsn": {
+            "type": "object",
+            "properties": {
+              "ip": {
+                "type": "object",
+                "properties": {
+                  "addr": {
+                    "type": "ip"
+                  }
+                }
+              }
+            }
+          },
+          "ppdvm": {
+            "type": "long"
+          },
+          "rtp": {
+            "type": "object",
+            "properties": {
+              "audio": {
+                "type": "object",
+                "properties": {
+                  "bw_avg": {
+                    "type": "long"
+                  },
+                  "bw_max": {
+                    "type": "long"
+                  },
+                  "channels": {
+                    "type": "long"
+                  }
+                }
+              },
+              "ref_clock": {
+                "type": "object",
+                "properties": {
+                  "freq": {
+                    "type": "long"
+                  }
+                }
+              },
+              "rtt": {
+                "type": "object",
+                "properties": {
+                  "latency_source": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "video": {
+                "type": "object",
+                "properties": {
+                  "bw_avg": {
+                    "type": "long"
+                  },
+                  "bw_max": {
+                    "type": "long"
+                  }
+                }
+              },
+              "voice": {
+                "type": "object",
+                "properties": {
+                  "bw_avg": {
+                    "type": "long"
+                  }
+                }
+              }
+            }
+          },
+          "session": {
+            "type": "object",
+            "properties": {
+              "duration": {
+                "type": "long"
+              },
+              "end": {
+                "type": "object",
+                "properties": {
+                  "timestamp": {
+                    "type": "date"
+                  }
+                }
+              },
+              "start": {
+                "type": "object",
+                "properties": {
+                  "timestamp": {
+                    "type": "date"
+                  }
+                }
+              }
+            }
+          },
+          "sgw_sgsn": {
+            "type": "object",
+            "properties": {
+              "ip": {
+                "type": "object",
+                "properties": {
+                  "addr": {
+                    "type": "ip"
+                  }
+                }
+              }
+            }
+          },
+          "snr_max": {
+            "type": "integer"
+          },
+          "ssrc": {
+            "type": "long"
+          },
+          "timezone": {
+            "type": "object",
+            "properties": {
+              "dst": {
+                "type": "keyword"
+              },
+              "offset": {
+                "type": "keyword"
+              }
+            }
+          },
+          "video": {
+            "type": "object",
+            "properties": {
+              "mos_abs": {
+                "type": "long"
+              },
+              "mos_rel": {
+                "type": "long"
+              }
+            }
+          },
+          "vstq": {
+            "type": "long"
           }
         }
       },

@@ -27307,88 +27307,88 @@
 
 
       {
-        "tfp.opcode.id": {
-          "path_match": "tfp.opcode.id",
+        "tftp.opcode.id": {
+          "path_match": "tftp.opcode.id",
           "mapping": {
             "type": "keyword"
           }
         }
       },
       {
-        "tfp.opcode.name": {
-          "path_match": "tfp.opcode.name",
+        "tftp.opcode.name": {
+          "path_match": "tftp.opcode.name",
           "mapping": {
             "type": "keyword"
           }
         }
       },
       {
-        "tfp.filename": {
-          "path_match": "tfp.filename",
+        "tftp.filename": {
+          "path_match": "tftp.filename",
           "mapping": {
             "type": "keyword"
           }
         }
       },
       {
-        "tfp.mode": {
-          "path_match": "tfp.mode",
+        "tftp.mode": {
+          "path_match": "tftp.mode",
           "mapping": {
             "type": "keyword"
           }
         }
       },
       {
-        "tfp.blksize": {
-          "path_match": "tfp.blksize",
+        "tftp.blksize": {
+          "path_match": "tftp.blksize",
           "mapping": {
             "type": "integer"
           }
         }
       },
       {
-        "tfp.timeout": {
-          "path_match": "tfp.timeout",
+        "tftp.timeout": {
+          "path_match": "tftp.timeout",
           "mapping": {
             "type": "integer"
           }
         }
       },
       {
-        "tfp.tsize": {
-          "path_match": "tfp.tsize",
+        "tftp.tsize": {
+          "path_match": "tftp.tsize",
           "mapping": {
             "type": "integer"
           }
         }
       },
       {
-        "tfp.block_num": {
-          "path_match": "tfp.block_num",
+        "tftp.block_num": {
+          "path_match": "tftp.block_num",
           "mapping": {
             "type": "long"
           }
         }
       },
       {
-        "tfp.error.code.id": {
-          "path_match": "tfp.error.code.id",
+        "tftp.error.code.id": {
+          "path_match": "tftp.error.code.id",
           "mapping": {
             "type": "keyword"
           }
         }
       },
       {
-        "tfp.error.code.name": {
-          "path_match": "tfp.error.code.name",
+        "tftp.error.code.name": {
+          "path_match": "tftp.error.code.name",
           "mapping": {
             "type": "keyword"
           }
         }
       },
       {
-        "tfp.error.msg": {
-          "path_match": "tfp.error.msg",
+        "tftp.error.msg": {
+          "path_match": "tftp.error.msg",
           "mapping": {
             "type": "keyword"
           }
